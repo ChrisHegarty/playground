@@ -41,7 +41,7 @@ public class TestPort {
         try {
             url = new URL("ftp", "java.sun.com", -20, "/pub/");
             throw new RuntimeException("MalformedURLException not thrown!");
-        } catch (MalformedURLException e) {
+        } catch (MalformedURLException expected) {
             // Everything fine. MalformedURLException expected
         }
 
